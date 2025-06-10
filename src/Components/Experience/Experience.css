@@ -23,7 +23,7 @@
   
   .experience-item:hover {
     border-color: #B415FF;
-    transform: scale(1.01);
+    transform: scale(1.03);
   }
   
   .experience-item h2 {
