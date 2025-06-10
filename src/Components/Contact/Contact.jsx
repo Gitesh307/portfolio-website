@@ -1,5 +1,6 @@
 import React from 'react'
 import './Contact.css'
+import { Fade } from 'react-awesome-reveal';
 import theme_pattern from '../../assets/theme_pattern.svg'
 import mail_icon from '../../assets/mail_icon.svg'
 import location_icon from '../../assets/location_icon.svg'
@@ -34,6 +35,7 @@ const Contact = () => {
 
 
   return (
+    <Fade direction="up" triggerOnce cascade damping={0.1}>
     <div id='contact' className='contact'>
       <div className="title-box">
         <h1>Get in touch</h1>
@@ -66,6 +68,7 @@ const Contact = () => {
         </form>
       </div>
     </div>
+    </Fade>
   )
 }
 

@@ -1,10 +1,12 @@
 import React from 'react'
 import './Footer.css'
+import { Fade } from 'react-awesome-reveal';
 import footer_logo from '../../assets/GITESH_icon_logo.svg'
 import user_icon from '../../assets/user_icon.svg'
 
 const Footer = () => {
   return (
+    <Fade direction="up" triggerOnce cascade damping={0.1}>
     <div className='footer'>
       <div className="footer-top">
         <div className="footer-top-left">
@@ -29,6 +31,7 @@ const Footer = () => {
         </div>
       </div>
     </div>
+    </Fade>
   )
 }
 

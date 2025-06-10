@@ -29,7 +29,8 @@
 }
 .contact-left p{
     max-width: 550px;
-    color: #D8D8D8;
+    color: var(--contact-text);
+    transition: color 0.3s ease;
     font-size: 16px;
     line-height: 25px;
 }
@@ -37,7 +38,8 @@
     display: flex;
     flex-direction: column;
     gap: 25px;
-    color: #D8D8D8;
+    color: var(--contact-text);
+    transition: color 0.3s ease;
     font-size: 22px;
 }
 .contact-detail{
@@ -57,7 +59,8 @@
 }
 
 .contact-right label{
-    color: #D8D8D8;
+    color: var(--contact-text);
+    transition: color 0.3s ease;
 
 }
 
@@ -67,8 +70,9 @@
     padding: 18px 0;
     padding-left: 20px;
     border-radius: 4px;
-    background: #32323c;
-    color: #A0A0A0;
+    background: var(--contact-input-bg);
+    color: var(--contact-input-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-family: Outfit;
     font-size: 18px;
 }

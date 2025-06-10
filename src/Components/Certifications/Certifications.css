@@ -19,11 +19,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 30px;
-    border: 2px solid white;
+    border: 2px solid var(--card-border);      /* ✅ updated */
     border-radius: 12px;
-    background-color: #1e1e1e;
+    background-color: var(--card-bg);          /* ✅ updated */
     transition: 0.4s;
-}
+  }
+  
+  .cert-info p {
+    color: var(--card-text);                   /* ✅ updated */
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 10px;
+  }
 
 .certification-item:hover {
     background-image: linear-gradient(45deg, #3f0028, #582300);
@@ -49,12 +56,12 @@
     -webkit-text-fill-color: transparent;
 }
 
-.cert-info p {
+/* .cert-info p {
     color: #d4d4d4;
     font-size: 18px;
     line-height: 28px;
     margin-top: 10px;
-}
+} */
 
 .cert-img img {
     max-width: 250px;

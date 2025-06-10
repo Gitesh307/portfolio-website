@@ -14,8 +14,8 @@
   }
   
   .experience-item {
-    background-color: #1e1e1e;
-    border: 2px solid white;
+    background-color: var(--card-bg);       /* ✅ background responsive */
+    border: 2px solid var(--card-border);
     border-radius: 12px;
     padding: 30px;
     transition: 0.3s ease;
@@ -34,14 +34,14 @@
   
   .exp-duration {
     font-size: 16px;
-    color: #cccccc;
+    color: var(--text-muted);  
     margin-bottom: 15px;
   }
   
   .experience-item ul {
     list-style: disc;
     padding-left: 20px;
-    color: #d4d4d4;
+    color: var(--list-text); 
     line-height: 1.8;
   }
   

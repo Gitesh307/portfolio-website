@@ -1,13 +1,43 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+  --card-bg: #f9f9f9;
+  --card-border: #222;
+  --text-secondary: #333;
+  --text-muted: #666;
+  --list-text: #444;
+  --contact-text: #222;
+  --contact-muted: #555;
+  --contact-input-bg: #f0f0f0;
+  --contact-input-text: #222;
+}
+
+[data-theme='dark'] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --card-border: #fff;
+  --text-secondary: #ffffff;
+  --text-muted: #cccccc;
+  --list-text: #d4d4d4;
+  --contact-text: #D8D8D8;
+  --contact-muted: #A0A0A0;
+  --contact-input-bg: #32323c;
+  --contact-input-text: #A0A0A0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  min-height: 100vh;
+  font-family: 'outfit';
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-body{
-  min-height: 100vh;
-  background: #161513;
-  color: white;
-  font-family: 'outfit';
 }
 .title-box{
   position: relative;

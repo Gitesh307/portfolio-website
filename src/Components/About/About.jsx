@@ -1,12 +1,16 @@
 import React from 'react'
 import './About.css'
+import { Fade } from 'react-awesome-reveal';
 import theme_pattern from '../../assets/theme_pattern.svg'
-import profile_img from '../../assets/profile-pic-2.png'
+import profile_img from '../../assets/Gitesh_Pic.png'
 
 
 const About = () => {
   return (
-    <div id='about' className='about'>
+    <Fade direction="up" triggerOnce cascade damping={0.1}>
+    <div id='about' className='about' initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }}>
       <div className="title-box">
         <h1>About me</h1>
         <img src={theme_pattern} alt="" />
@@ -51,11 +55,12 @@ const About = () => {
         </div>
         <hr />
         <div className="about-achievement">
-            <h1>15+</h1>
-            <p>HAPPY CLIENTS</p>
+            <h1>3+</h1>
+            <p>CERTIFICATIONS</p>
         </div>
       </div>
     </div>
+    </Fade>
   )
 }
 

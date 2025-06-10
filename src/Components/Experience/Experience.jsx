@@ -1,9 +1,11 @@
 import React from 'react';
 import './Experience.css';
+import { Fade } from 'react-awesome-reveal';
 import theme_pattern from '../../assets/theme_pattern.svg';
 
 const Experience = () => {
   return (
+    <Fade direction="up" triggerOnce cascade damping={0.1}>
     <div id="experience" className="experience">
       <div className="title-box">
         <h1>Experience</h1>
@@ -43,6 +45,7 @@ const Experience = () => {
         </div>
       </div>
     </div>
+    </Fade>
   );
 };
 

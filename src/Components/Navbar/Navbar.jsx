@@ -5,6 +5,7 @@ import underline from '../../assets/nav_underline.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import menu_open from '../../assets/menu_open.svg'
 import menu_close from '../../assets/menu_close.svg'
+import ThemeToggle from './ThemeToggle'; // adjust path as needed
 
 const Navbar = () => {
   
@@ -30,7 +31,10 @@ const Navbar = () => {
         <li><AnchorLink className='anchor-link' offset={50} href='#experience'><p onClick={()=>setMenu("experience")}>Experience</p></AnchorLink>{menu==="experience"?<img src={underline} alt=''/>:<></>}</li>
         <li><AnchorLink className='anchor-link' offset={50} href='#contact'><p onClick={()=>setMenu("contact")}>Contact</p></AnchorLink>{menu==="contact"?<img src={underline} alt=''/>:<></>}</li>
       </ul>
-      <div className="nav-connect"><AnchorLink className='anchor-link' offset={50} href='#contact'>Connect With Me</AnchorLink></div>
+      <div className="nav-actions">
+  <ThemeToggle /><br/>
+  <AnchorLink className='anchor-link' offset={50} href='#contact'>Connect With Me</AnchorLink>
+</div>
     </div>
   )
 }

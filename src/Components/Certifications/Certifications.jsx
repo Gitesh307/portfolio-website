@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Certifications.css';
+import { Fade } from 'react-awesome-reveal';
 import theme_pattern from '../../assets/theme_pattern.svg';
 import Certifications_Data from '../../assets/certifications_data';
 
@@ -7,6 +8,7 @@ const Certifications = () => {
   const [modalImage, setModalImage] = useState(null);
 
   return (
+    <Fade direction="up" triggerOnce cascade damping={0.1}>
     <div id='certifications' className='certifications'>
       <div className="title-box">
         <h1>Certifications</h1>
@@ -38,6 +40,7 @@ const Certifications = () => {
         </div>
       )}
     </div>
+    </Fade>
   );
 };
 
