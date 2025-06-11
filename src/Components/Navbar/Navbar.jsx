@@ -39,7 +39,7 @@ const Navbar = () => {
     { name: 'About', id: 'about' },
     { name: 'Certifications', id: 'certifications' },
     { name: 'Experience', id: 'experience' },
-    { name: 'Contact', id: 'contact' },
+    { name: 'Contact', id: 'contact' }, // Keeps nav highlighting consistent
   ]
 
   return (
@@ -70,7 +70,7 @@ const Navbar = () => {
                 to={item.id}
                 spy={true}
                 smooth={true}
-                offset={-80} // Adjust for navbar height
+                offset={-80}
                 duration={500}
                 onClick={() => setMenu(item.id)}
                 className="relative group cursor-pointer"
@@ -102,7 +102,16 @@ const Navbar = () => {
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
 
-            <ScrollLink to="contact" offset={-60} smooth={true} duration={500}>
+            {/* Let's Connect scrolls directly to contact form */}
+            <ScrollLink
+              to="contact-form"
+              spy={true}
+              smooth={true}
+              offset={-80}
+              duration={500}
+              onClick={() => setMenu("contact")}
+              className="cursor-pointer"
+            >
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -124,7 +133,7 @@ const Navbar = () => {
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
             </motion.button>
-            
+
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -171,12 +180,24 @@ const Navbar = () => {
                     </ScrollLink>
                   </motion.div>
                 ))}
+
+                {/* Let's Connect (Mobile) */}
                 <div className="px-2 pt-2">
-                  <ScrollLink to="contact" offset={-60} smooth={true} duration={500}>
+                  <ScrollLink
+                    to="contact-form"
+                    spy={true}
+                    smooth={true}
+                    offset={-80}
+                    duration={500}
+                    onClick={() => {
+                      setMenu("contact")
+                      setIsOpen(false)
+                    }}
+                    className="cursor-pointer"
+                  >
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
-                      onClick={() => setIsOpen(false)}
                       className="w-full btn-primary"
                     >
                       Let's Connect

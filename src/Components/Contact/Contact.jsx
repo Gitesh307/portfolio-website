@@ -32,7 +32,7 @@ const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault()
     setIsSubmitting(true)
-    
+
     const formData = new FormData(event.target)
     formData.append("access_key", "86f37c77-71bf-4f82-9c57-d142fa5f12d5")
 
@@ -155,7 +155,7 @@ const Contact = () => {
             </motion.div>
 
             {/* Right Column - Contact Form */}
-            <motion.div variants={itemVariants}>
+            <motion.div variants={itemVariants} id="contact-form">
               <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
                 <form onSubmit={onSubmit} className="space-y-6">
                   <div>
@@ -213,7 +213,6 @@ const Contact = () => {
                     ></textarea>
                   </div>
 
-                  {/* Form Status */}
                   {formStatus && (
                     <motion.div
                       initial={{ opacity: 0, y: 10 }}
