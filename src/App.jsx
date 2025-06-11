@@ -9,15 +9,16 @@ import Experience from './Components/Experience/Experience'
 
 const App = () => {
   return (
-    <div>
-      <Navbar/>
-      <Hero/>
-      <About/>
-      <Certifications/>
-      <Experience/>
-      {/* <MyWork/> */}
-      <Contact/>
-      <Footer/>
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Certifications />
+        <Experience />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   )
 }
