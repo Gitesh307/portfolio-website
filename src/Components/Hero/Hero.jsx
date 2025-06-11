@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { ArrowDown, Download, Mail } from 'lucide-react'
-import profile_img from '../../assets/profile-pic-2.png'
+import profile_img from '../../assets/Gitesh_Pic.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import resume from '../../assets/GiteshSagvekarResume.pdf'
 

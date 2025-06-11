@@ -77,7 +77,7 @@ const About = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
             {/* Left Column - Image */}
             <motion.div variants={itemVariants} className="relative">
-              <div className="relative max-w-md mx-auto lg:max-w-none">
+            <div className="relative mx-auto max-w-sm aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl lg:mx-0">
                 <img
                   src={profile_img}
                   alt="Gitesh Sagvekar"
