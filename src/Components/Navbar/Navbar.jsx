@@ -1,8 +1,8 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Sun, Moon } from 'lucide-react'
 import logo from '../../assets/GITESH_icon_logo.svg'
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Link as ScrollLink } from 'react-scroll'
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home")
@@ -35,11 +35,11 @@ const Navbar = () => {
   }
 
   const navItems = [
-    { name: 'Home', href: '#home', id: 'home' },
-    { name: 'About', href: '#about', id: 'about' },
-    { name: 'Certifications', href: '#certifications', id: 'certifications' },
-    { name: 'Experience', href: '#experience', id: 'experience' },
-    { name: 'Contact', href: '#contact', id: 'contact' },
+    { name: 'Home', id: 'home' },
+    { name: 'About', id: 'about' },
+    { name: 'Certifications', id: 'certifications' },
+    { name: 'Experience', id: 'experience' },
+    { name: 'Contact', id: 'contact' },
   ]
 
   return (
@@ -65,12 +65,15 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
             {navItems.map((item) => (
-              <AnchorLink
+              <ScrollLink
                 key={item.id}
-                href={item.href}
-                offset={100}
-                className="relative group"
+                to={item.id}
+                spy={true}
+                smooth={true}
+                offset={-80} // Adjust for navbar height
+                duration={500}
                 onClick={() => setMenu(item.id)}
+                className="relative group cursor-pointer"
               >
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
                   {item.name}
@@ -83,7 +86,7 @@ const Navbar = () => {
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
                 )}
-              </AnchorLink>
+              </ScrollLink>
             ))}
           </div>
 
@@ -98,8 +101,8 @@ const Navbar = () => {
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
-            
-            <AnchorLink href="#contact" offset={50}>
+
+            <ScrollLink to="contact" offset={-60} smooth={true} duration={500}>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -107,7 +110,7 @@ const Navbar = () => {
               >
                 Let's Connect
               </motion.button>
-            </AnchorLink>
+            </ScrollLink>
           </div>
 
           {/* Mobile menu button */}
@@ -152,21 +155,24 @@ const Navbar = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <AnchorLink
-                      href={item.href}
-                      offset={100}
+                    <ScrollLink
+                      to={item.id}
+                      spy={true}
+                      smooth={true}
+                      offset={-80}
+                      duration={500}
                       onClick={() => {
                         setMenu(item.id)
                         setIsOpen(false)
                       }}
-                      className="block px-4 py-3 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg mx-2 transition-colors duration-200"
+                      className="block px-4 py-3 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg mx-2 transition-colors duration-200 cursor-pointer"
                     >
                       {item.name}
-                    </AnchorLink>
+                    </ScrollLink>
                   </motion.div>
                 ))}
                 <div className="px-2 pt-2">
-                  <AnchorLink href="#contact" offset={50}>
+                  <ScrollLink to="contact" offset={-60} smooth={true} duration={500}>
                     <motion.button
                       whileHover={{ scale: 1.02 }}
                       whileTap={{ scale: 0.98 }}
@@ -175,7 +181,7 @@ const Navbar = () => {
                     >
                       Let's Connect
                     </motion.button>
-                  </AnchorLink>
+                  </ScrollLink>
                 </div>
               </div>
             </motion.div>
