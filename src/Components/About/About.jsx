@@ -1,7 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { Code, Database, Cloud, Zap } from 'lucide-react'
-import profile_img from '../../assets/Gitesh_Pic.png'
 
 const About = () => {
   const containerVariants = {
@@ -53,7 +52,7 @@ const About = () => {
   const achievements = [
     { number: '3+', label: 'Years of Experience', color: 'text-primary-600' },
     { number: '5+', label: 'Projects Completed', color: 'text-accent-600' },
-    { number: '3+', label: 'Certifications', color: 'text-primary-600' }
+    { number: '3+', label: 'Certifications', color: 'text-secondary-600' }
   ]
 
   return (
@@ -73,36 +72,23 @@ const About = () => {
             </p>
           </motion.div>
 
-          {/* Main Content */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
-            {/* Left Column - Image */}
-            <motion.div variants={itemVariants} className="relative">
-            <div className="relative mx-auto max-w-sm aspect-[4/5] overflow-hidden rounded-2xl shadow-2xl lg:mx-0">
-                <img
-                  src={profile_img}
-                  alt="Gitesh Sagvekar"
-                  className="w-full rounded-2xl shadow-2xl"
-                />
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-primary-500/10 to-accent-500/10"></div>
-              </div>
-            </motion.div>
-
-            {/* Right Column - Content */}
+          {/* Main Content - Text Only */}
+          <div className="max-w-4xl mx-auto mb-20">
             <motion.div variants={itemVariants} className="space-y-6">
-              <div className="prose prose-lg dark:prose-invert max-w-none">
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+              <div className="prose prose-lg dark:prose-invert max-w-none text-center">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                   I'm a Full Stack Software Engineer with a passion for solving real-world problems through code. 
                   My journey into tech began with a fascination for how digital products work behind the scenes, 
                   which led me to pursue a Bachelor's in Information Technology and later, a Master's in Computer Science at Clark University.
                 </p>
                 
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                   Over the years, I've sharpened my skills by working across diverse environments, from contributing to 
                   scalable enterprise solutions at Tata Consultancy Services, to leading impactful university and 
                   community-driven projects in the U.S.
                 </p>
                 
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
                   I take pride in building efficient, user-focused applications that scale, whether it's reducing 
                   deployment time by 40% or improving app performance by 27%.
                 </p>

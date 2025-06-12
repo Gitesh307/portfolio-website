@@ -31,10 +31,11 @@ const Hero = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Background Elements */}
+      {/* Enhanced Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-primary-500/20 to-accent-500/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-secondary-500/15 to-primary-500/15 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-gradient-to-r from-accent-500/10 to-secondary-500/10 rounded-full blur-3xl animate-pulse"></div>
       </div>
 
       <div className="container-custom section-padding">
@@ -44,26 +45,46 @@ const Hero = () => {
           animate="visible"
           className="text-center max-w-5xl mx-auto"
         >
-          {/* Profile Image */}
+          {/* Enhanced Profile Image */}
           <motion.div
             variants={itemVariants}
             className="mb-8 flex justify-center"
           >
-            <div className="relative">
-              <motion.img
-                src={profile_img}
-                alt="Gitesh Sagvekar"
-                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-2xl"
+            <div className="relative group">
+              <motion.div
+                className="relative w-44 h-44 sm:w-52 sm:h-52 lg:w-60 lg:h-60"
                 whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500/20 to-accent-500/20 animate-glow"></div>
+                transition={{ duration: 0.4, ease: "easeOut" }}
+              >
+                {/* Main image */}
+                <img
+                  src={profile_img}
+                  alt="Gitesh Sagvekar"
+                  className="w-full h-full rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-2xl relative z-10"
+                />
+                
+                {/* Animated gradient border */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary-500 via-accent-500 to-secondary-500 animate-spin-slow opacity-75 blur-sm"></div>
+                
+                {/* Glow effect */}
+                <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-400/30 via-accent-400/20 to-secondary-400/30 animate-pulse-glow"></div>
+                
+                {/* Floating particles effect */}
+                <div className="absolute -inset-4">
+                  <div className="absolute top-4 right-4 w-2 h-2 bg-primary-400 rounded-full animate-ping"></div>
+                  <div className="absolute bottom-6 left-6 w-1.5 h-1.5 bg-accent-400 rounded-full animate-ping delay-300"></div>
+                  <div className="absolute top-8 left-4 w-1 h-1 bg-secondary-400 rounded-full animate-ping delay-700"></div>
+                </div>
+                
+                {/* Inner highlight */}
+                <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-white/20 to-transparent"></div>
+              </motion.div>
             </div>
           </motion.div>
 
           {/* Greeting */}
           <motion.div variants={itemVariants} className="mb-4">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-primary-50 dark:bg-primary-900/20 text-primary-700 dark:text-primary-300 text-sm font-medium border border-primary-200 dark:border-primary-800">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-primary-50 to-accent-50 dark:from-primary-900/20 dark:to-accent-900/20 text-primary-700 dark:text-primary-300 text-sm font-medium border border-primary-200 dark:border-primary-800">
               👋 Hello, I'm
             </span>
           </motion.div>
@@ -95,43 +116,56 @@ const Hero = () => {
             I've improved app performance by 27% and reduced deployment time by 31%.
           </motion.p>
 
-          {/* Stats */}
+          {/* Enhanced Stats */}
           <motion.div
             variants={itemVariants}
             className="grid grid-cols-3 gap-8 max-w-md mx-auto mb-12"
           >
             {[
-              { number: '3+', label: 'Years Experience' },
-              { number: '5+', label: 'Projects Completed' },
-              { number: '3+', label: 'Certifications' }
+              { number: '3+', label: 'Years Experience', color: 'from-primary-500 to-primary-600' },
+              { number: '5+', label: 'Projects Completed', color: 'from-accent-500 to-accent-600' },
+              { number: '3+', label: 'Certifications', color: 'from-secondary-500 to-secondary-600' }
             ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-2xl sm:text-3xl font-bold gradient-text">{stat.number}</div>
+              <motion.div 
+                key={index} 
+                className="text-center group cursor-pointer"
+                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.2 }}
+              >
+                <div className={`text-2xl sm:text-3xl font-bold bg-gradient-to-r ${stat.color} bg-clip-text text-transparent group-hover:animate-pulse`}>
+                  {stat.number}
+                </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
 
-          {/* CTA Buttons */}
+          {/* Enhanced CTA Buttons */}
           <motion.div
             variants={itemVariants}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <a
+            <motion.a
               href={resume}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary group"
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
             >
               <Download size={20} className="mr-2 group-hover:animate-bounce" />
               Download Resume
-            </a>
+            </motion.a>
             
             <AnchorLink href="#contact" offset={50}>
-              <button className="btn-secondary group">
+              <motion.button 
+                className="btn-secondary group"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+              >
                 <Mail size={20} className="mr-2 group-hover:animate-pulse" />
                 Get In Touch
-              </button>
+              </motion.button>
             </AnchorLink>
           </motion.div>
 
