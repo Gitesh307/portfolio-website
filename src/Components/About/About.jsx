@@ -50,13 +50,13 @@ const About = () => {
   ]
 
   const achievements = [
-    { number: '3+', label: 'Years of Experience', color: 'text-primary-600' },
-    { number: '5+', label: 'Projects Completed', color: 'text-accent-600' },
-    { number: '3+', label: 'Certifications', color: 'text-secondary-600' }
+    { number: '3+', label: 'Years of Experience', color: 'text-beige-700' },
+    { number: '5+', label: 'Projects Completed', color: 'text-gray-700' },
+    { number: '3+', label: 'Certifications', color: 'text-beige-700' }
   ]
 
   return (
-    <section id="about" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-900/50">
+    <section id="about" className="py-20 lg:py-32 bg-beige-50 dark:bg-gray-900/50">
       <div className="container-custom section-padding">
         <motion.div
           variants={containerVariants}
@@ -107,11 +107,11 @@ const About = () => {
                 <motion.div
                   key={index}
                   variants={itemVariants}
-                  className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg card-hover border border-gray-200 dark:border-gray-700"
+                  className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg card-hover border border-beige-200 dark:border-gray-700"
                 >
                   <div className="flex items-center mb-4">
-                    <div className="p-2 bg-primary-100 dark:bg-primary-900/30 rounded-lg mr-3">
-                      <category.icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                    <div className="p-2 bg-beige-100 dark:bg-beige-900/30 rounded-lg mr-3">
+                      <category.icon className="w-6 h-6 text-beige-700 dark:text-beige-400" />
                     </div>
                     <h4 className="font-semibold text-gray-900 dark:text-white">{category.title}</h4>
                   </div>
@@ -119,7 +119,7 @@ const About = () => {
                     {category.skills.map((skill, skillIndex) => (
                       <span
                         key={skillIndex}
-                        className="px-3 py-1 text-sm bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full"
+                        className="px-3 py-1 text-sm bg-beige-100 dark:bg-gray-700 text-beige-800 dark:text-gray-300 rounded-full"
                       >
                         {skill}
                       </span>

@@ -54,12 +54,12 @@ const Certifications = () => {
                 variants={itemVariants}
                 className="group"
               >
-                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden card-hover">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-beige-200 dark:border-gray-700 overflow-hidden card-hover">
                   <div className="grid lg:grid-cols-2 gap-8 p-8">
                     {/* Content */}
                     <div className="flex flex-col justify-center space-y-4">
                       <div className="flex items-center space-x-3">
-                        <span className="inline-flex items-center justify-center w-8 h-8 bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 rounded-full text-sm font-bold">
+                        <span className="inline-flex items-center justify-center w-8 h-8 bg-beige-100 dark:bg-beige-900/30 text-beige-700 dark:text-beige-400 rounded-full text-sm font-bold">
                           {cert.c_no}
                         </span>
                         <span className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
@@ -67,7 +67,7 @@ const Certifications = () => {
                         </span>
                       </div>
                       
-                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors duration-300">
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white group-hover:text-beige-700 dark:group-hover:text-beige-400 transition-colors duration-300">
                         {cert.c_name}
                       </h3>
                       
@@ -77,7 +77,7 @@ const Certifications = () => {
                       
                       <button
                         onClick={() => setModalImage(cert.c_img)}
-                        className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors duration-200 group/btn"
+                        className="inline-flex items-center text-beige-700 dark:text-beige-400 hover:text-beige-800 dark:hover:text-beige-300 font-medium transition-colors duration-200 group/btn"
                       >
                         View Certificate
                         <ExternalLink size={16} className="ml-2 group-hover/btn:translate-x-1 transition-transform duration-200" />

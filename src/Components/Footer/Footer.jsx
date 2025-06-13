@@ -59,7 +59,7 @@ const Footer = () => {
                       key={link.name}
                       href={link.href}
                       offset={50}
-                      className="block text-gray-300 hover:text-white transition-colors duration-200"
+                      className="block text-gray-300 hover:text-beige-300 transition-colors duration-200"
                     >
                       {link.name}
                     </AnchorLink>
@@ -80,13 +80,13 @@ const Footer = () => {
                 <div className="space-y-3">
                   <a
                     href="mailto:giteshsagvekar07@gmail.com"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    className="block text-gray-300 hover:text-beige-300 transition-colors duration-200"
                   >
                     giteshsagvekar07@gmail.com
                   </a>
                   <a
                     href="tel:+17745198635"
-                    className="block text-gray-300 hover:text-white transition-colors duration-200"
+                    className="block text-gray-300 hover:text-beige-300 transition-colors duration-200"
                   >
                     +1 774-519-8635
                   </a>
@@ -127,7 +127,7 @@ const Footer = () => {
                 onClick={scrollToTop}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
-                className="p-2 bg-gray-800 hover:bg-gray-700 rounded-full transition-colors duration-200"
+                className="p-2 bg-gray-800 hover:bg-beige-700 rounded-full transition-colors duration-200"
                 aria-label="Scroll to top"
               >
                 <ArrowUp size={16} />

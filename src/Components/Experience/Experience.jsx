@@ -39,7 +39,7 @@ const Experience = () => {
         "Enhanced frontend performance and reduced response time by 27% through code optimization",
         "Recognized with awards for team excellence and project coordination"
       ],
-      color: "primary"
+      color: "beige"
     },
     {
       company: "Clark University",
@@ -52,7 +52,7 @@ const Experience = () => {
         "Created detailed faculty, course, project, and alumni pages in collaboration with the program director",
         "Helped 30+ students in coursework and setup during Teaching Assistant role"
       ],
-      color: "accent"
+      color: "gray"
     },
     {
       company: "WeCan Initiative",
@@ -65,12 +65,12 @@ const Experience = () => {
         "Led the design of a mobile app interface and collaborated with founders using agile methodology",
         "Focused on sustainability and user accessibility in platform features"
       ],
-      color: "primary"
+      color: "beige"
     }
   ]
 
   return (
-    <section id="experience" className="py-20 lg:py-32 bg-gray-50 dark:bg-gray-900/50">
+    <section id="experience" className="py-20 lg:py-32 bg-beige-50 dark:bg-gray-900/50">
       <div className="container-custom section-padding">
         <motion.div
           variants={containerVariants}
@@ -89,7 +89,7 @@ const Experience = () => {
           {/* Experience Timeline */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 to-accent-500 transform lg:-translate-x-0.5"></div>
+            <div className="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-beige-500 to-gray-500 transform lg:-translate-x-0.5"></div>
 
             <div className="space-y-12">
               {experiences.map((exp, index) => (
@@ -101,27 +101,27 @@ const Experience = () => {
                   }`}
                 >
                   {/* Timeline Dot */}
-                  <div className="absolute left-4 lg:left-1/2 w-4 h-4 bg-white dark:bg-gray-900 border-4 border-primary-500 rounded-full transform lg:-translate-x-1/2 z-10"></div>
+                  <div className="absolute left-4 lg:left-1/2 w-4 h-4 bg-white dark:bg-gray-900 border-4 border-beige-500 rounded-full transform lg:-translate-x-1/2 z-10"></div>
 
                   {/* Content Card */}
                   <div className={`ml-12 lg:ml-0 lg:w-1/2 ${
                     index % 2 === 0 ? 'lg:pr-12' : 'lg:pl-12'
                   }`}>
                     <motion.div
-                      className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 card-hover"
+                      className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-beige-200 dark:border-gray-700 card-hover"
                       whileHover={{ scale: 1.02 }}
                       transition={{ duration: 0.2 }}
                     >
                       {/* Header */}
                       <div className="mb-6">
                         <div className="flex items-center mb-2">
-                          <Building className="w-5 h-5 text-primary-600 dark:text-primary-400 mr-2" />
+                          <Building className="w-5 h-5 text-beige-700 dark:text-beige-400 mr-2" />
                           <h3 className="text-xl font-bold text-gray-900 dark:text-white">
                             {exp.company}
                           </h3>
                         </div>
                         
-                        <h4 className="text-lg font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                        <h4 className="text-lg font-semibold text-beige-700 dark:text-beige-400 mb-3">
                           {exp.position}
                         </h4>
                         
@@ -150,7 +150,7 @@ const Experience = () => {
                       <ul className="space-y-3">
                         {exp.achievements.map((achievement, achievementIndex) => (
                           <li key={achievementIndex} className="flex items-start">
-                            <div className="w-2 h-2 bg-primary-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                            <div className="w-2 h-2 bg-beige-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
                             <span className="text-gray-600 dark:text-gray-300 leading-relaxed">
                               {achievement}
                             </span>

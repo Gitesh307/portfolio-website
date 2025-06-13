@@ -122,8 +122,8 @@ const Contact = () => {
                     variants={itemVariants}
                     className="flex items-center space-x-4 group"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-xl flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors duration-300">
-                      <info.icon className="w-6 h-6 text-primary-600 dark:text-primary-400" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-beige-100 dark:bg-beige-900/30 rounded-xl flex items-center justify-center group-hover:bg-beige-200 dark:group-hover:bg-beige-900/50 transition-colors duration-300">
+                      <info.icon className="w-6 h-6 text-beige-700 dark:text-beige-400" />
                     </div>
                     <div>
                       <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
@@ -132,7 +132,7 @@ const Contact = () => {
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-lg font-medium text-gray-900 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+                          className="text-lg font-medium text-gray-900 dark:text-white hover:text-beige-700 dark:hover:text-beige-400 transition-colors duration-200"
                         >
                           {info.value}
                         </a>
@@ -147,7 +147,7 @@ const Contact = () => {
               </div>
 
               {/* Social Links or Additional Info */}
-              <motion.div variants={itemVariants} className="pt-8 border-t border-gray-200 dark:border-gray-700">
+              <motion.div variants={itemVariants} className="pt-8 border-t border-beige-200 dark:border-gray-700">
                 <p className="text-gray-600 dark:text-gray-300">
                   <span className="font-medium">Response time:</span> Usually within 24 hours
                 </p>
@@ -156,7 +156,7 @@ const Contact = () => {
 
             {/* Right Column - Contact Form */}
             <motion.div variants={itemVariants} id="contact-form">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700">
+              <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-beige-200 dark:border-gray-700">
                 <form onSubmit={onSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -167,7 +167,7 @@ const Contact = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200"
                       placeholder="Enter your full name"
                     />
                   </div>
@@ -181,7 +181,7 @@ const Contact = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200"
                       placeholder="Enter your email address"
                     />
                   </div>
@@ -194,7 +194,7 @@ const Contact = () => {
                       type="text"
                       id="subject"
                       name="subject"
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200"
+                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200"
                       placeholder="What's this about?"
                     />
                   </div>
@@ -208,7 +208,7 @@ const Contact = () => {
                       name="message"
                       rows="6"
                       required
-                      className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-colors duration-200 resize-none"
+                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200 resize-none"
                       placeholder="Tell me about your project or just say hello..."
                     ></textarea>
                   </div>
