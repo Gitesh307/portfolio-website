@@ -85,7 +85,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 lg:py-32">
+    <section id="contact" className="py-20 lg:py-32 bg-white dark:bg-black">
       <div className="container-custom section-padding">
         <motion.div
           variants={containerVariants}
@@ -105,10 +105,10 @@ const Contact = () => {
             {/* Left Column - Contact Info */}
             <motion.div variants={itemVariants} className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-2xl font-bold text-primary mb-4">
                   Let's Start a Conversation
                 </h3>
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg text-secondary leading-relaxed">
                   I'm currently available to take on new projects and exciting opportunities. 
                   Whether you have a question, want to discuss a project, or just want to say hello, 
                   I'd love to hear from you.
@@ -122,22 +122,22 @@ const Contact = () => {
                     variants={itemVariants}
                     className="flex items-center space-x-4 group"
                   >
-                    <div className="flex-shrink-0 w-12 h-12 bg-beige-100 dark:bg-beige-900/30 rounded-xl flex items-center justify-center group-hover:bg-beige-200 dark:group-hover:bg-beige-900/50 transition-colors duration-300">
-                      <info.icon className="w-6 h-6 text-beige-700 dark:text-beige-400" />
+                    <div className="flex-shrink-0 w-12 h-12 bg-gray-50 dark:bg-dark-800 rounded-xl flex items-center justify-center group-hover:bg-gray-100 dark:group-hover:bg-gray-700 transition-colors duration-300">
+                      <info.icon className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <p className="text-sm font-medium text-gray-500 dark:text-gray-400 uppercase tracking-wide">
+                      <p className="text-sm font-medium text-secondary uppercase tracking-wide">
                         {info.label}
                       </p>
                       {info.href ? (
                         <a
                           href={info.href}
-                          className="text-lg font-medium text-gray-900 dark:text-white hover:text-beige-700 dark:hover:text-beige-400 transition-colors duration-200"
+                          className="text-lg font-medium text-primary hover:text-accent transition-colors duration-200"
                         >
                           {info.value}
                         </a>
                       ) : (
-                        <p className="text-lg font-medium text-gray-900 dark:text-white">
+                        <p className="text-lg font-medium text-primary">
                           {info.value}
                         </p>
                       )}
@@ -146,9 +146,9 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Social Links or Additional Info */}
-              <motion.div variants={itemVariants} className="pt-8 border-t border-beige-200 dark:border-gray-700">
-                <p className="text-gray-600 dark:text-gray-300">
+              {/* Additional Info */}
+              <motion.div variants={itemVariants} className="pt-8 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-secondary">
                   <span className="font-medium">Response time:</span> Usually within 24 hours
                 </p>
               </motion.div>
@@ -156,10 +156,10 @@ const Contact = () => {
 
             {/* Right Column - Contact Form */}
             <motion.div variants={itemVariants} id="contact-form">
-              <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-beige-200 dark:border-gray-700">
+              <div className="bg-card p-8 rounded-2xl shadow-light dark:shadow-dark border-default">
                 <form onSubmit={onSubmit} className="space-y-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-primary mb-2">
                       Your Name *
                     </label>
                     <input
@@ -167,13 +167,13 @@ const Contact = () => {
                       id="name"
                       name="name"
                       required
-                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200"
+                      className="form-input"
                       placeholder="Enter your full name"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-primary mb-2">
                       Your Email *
                     </label>
                     <input
@@ -181,26 +181,26 @@ const Contact = () => {
                       id="email"
                       name="email"
                       required
-                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200"
+                      className="form-input"
                       placeholder="Enter your email address"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-primary mb-2">
                       Subject
                     </label>
                     <input
                       type="text"
                       id="subject"
                       name="subject"
-                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200"
+                      className="form-input"
                       placeholder="What's this about?"
                     />
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                    <label htmlFor="message" className="block text-sm font-medium text-primary mb-2">
                       Message *
                     </label>
                     <textarea
@@ -208,7 +208,7 @@ const Contact = () => {
                       name="message"
                       rows="6"
                       required
-                      className="w-full px-4 py-3 bg-beige-50 dark:bg-gray-700 border border-beige-300 dark:border-gray-600 rounded-xl text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-beige-500 focus:border-transparent transition-colors duration-200 resize-none"
+                      className="form-input resize-none"
                       placeholder="Tell me about your project or just say hello..."
                     ></textarea>
                   </div>

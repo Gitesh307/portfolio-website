@@ -12,67 +12,59 @@ export default {
         'display': ['Cal Sans', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
+        // Light Mode Colors
         primary: {
-          50: '#fefdfb',
-          100: '#fdf9f0',
-          200: '#f9f0e0',
-          300: '#f3e5c7',
-          400: '#ebd4a2',
-          500: '#d4b896',
-          600: '#c4a47c',
-          700: '#a68b5b',
-          800: '#8b7355',
-          900: '#6b5b47',
+          50: '#f0f8ff',
+          100: '#e0f1ff',
+          200: '#bae3ff',
+          300: '#7dd0ff',
+          400: '#38bbff',
+          500: '#007acc', // Azure Blue
+          600: '#005f99', // Link Hover
+          700: '#004d7a',
+          800: '#003d61',
+          900: '#002d47',
         },
+        // Dark Mode Colors
         accent: {
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a3a3a3',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          800: '#262626',
-          900: '#171717',
+          50: '#f0f8ff',
+          100: '#e0f1ff',
+          200: '#bae3ff',
+          300: '#7dd0ff',
+          400: '#3399ff', // Link Hover Dark
+          500: '#1e90ff', // Dodger Blue
+          600: '#64b5f6', // Primary Button Dark
+          700: '#42a5f5',
+          800: '#2196f3',
+          900: '#1976d2',
         },
-        beige: {
-          50: '#fefdfb',
-          100: '#fdf9f0',
-          200: '#f9f0e0',
-          300: '#f3e5c7',
-          400: '#ebd4a2',
-          500: '#d4b896',
-          600: '#c4a47c',
-          700: '#a68b5b',
-          800: '#8b7355',
-          900: '#6b5b47',
-        },
-        neutral: {
-          50: '#fafafa',
-          100: '#f5f5f5',
-          200: '#e5e5e5',
-          300: '#d4d4d4',
-          400: '#a3a3a3',
-          500: '#737373',
-          600: '#525252',
-          700: '#404040',
-          800: '#262626',
-          900: '#171717',
-          950: '#0a0a0a',
-        },
+        // Neutral grays for text and backgrounds
         gray: {
-          50: '#fafafa',
+          50: '#f8f9fa',  // Card Background Light
           100: '#f5f5f5',
           200: '#e5e5e5',
           300: '#d4d4d4',
           400: '#a3a3a3',
           500: '#737373',
-          600: '#525252',
+          600: '#555555',  // Secondary Text Light
           700: '#404040',
           800: '#262626',
-          900: '#171717',
+          900: '#111111',  // Primary Text Light
           950: '#0a0a0a',
+        },
+        // Dark mode specific colors
+        dark: {
+          50: '#f0f0f0',   // Primary Text Dark
+          100: '#e0e0e0',
+          200: '#cccccc',
+          300: '#bbbbbb',  // Secondary Text Dark
+          400: '#999999',
+          500: '#666666',
+          600: '#4a4a4a',
+          700: '#333333',
+          800: '#2a2a2a',  // Card Background Dark
+          900: '#1a1a1a',
+          950: '#121212',  // Button Text Dark
         }
       },
       animation: {
@@ -106,8 +98,8 @@ export default {
           '50%': { transform: 'translateY(-5px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 5px rgba(212, 184, 150, 0.3)' },
-          '100%': { boxShadow: '0 0 15px rgba(212, 184, 150, 0.6)' },
+          '0%': { boxShadow: '0 0 5px rgba(0, 122, 204, 0.3)' },
+          '100%': { boxShadow: '0 0 15px rgba(0, 122, 204, 0.6)' },
         },
         float: {
           '0%, 100%': { transform: 'translateY(0px)' },
@@ -124,6 +116,10 @@ export default {
       },
       backdropBlur: {
         xs: '2px',
+      },
+      boxShadow: {
+        'light': '0 1px 3px 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        'dark': '0 1px 3px 0 rgba(255, 255, 255, 0.05), 0 1px 2px 0 rgba(255, 255, 255, 0.05)',
       }
     },
   },

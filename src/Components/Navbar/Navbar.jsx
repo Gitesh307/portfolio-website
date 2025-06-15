@@ -39,7 +39,7 @@ const Navbar = () => {
     { name: 'About', id: 'about' },
     { name: 'Certifications', id: 'certifications' },
     { name: 'Experience', id: 'experience' },
-    { name: 'Contact', id: 'contact' }, // Keeps nav highlighting consistent
+    { name: 'Contact', id: 'contact' },
   ]
 
   return (
@@ -48,7 +48,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled 
-          ? 'bg-white/80 dark:bg-gray-950/80 backdrop-blur-md shadow-lg' 
+          ? 'bg-white/90 dark:bg-black/90 backdrop-blur-md shadow-light dark:shadow-dark' 
           : 'bg-transparent'
       }`}
     >
@@ -75,13 +75,13 @@ const Navbar = () => {
                 onClick={() => setMenu(item.id)}
                 className="relative group cursor-pointer"
               >
-                <span className="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200">
+                <span className="text-sm font-medium text-primary hover:text-accent transition-colors duration-200">
                   {item.name}
                 </span>
                 {menu === item.id && (
                   <motion.div
                     layoutId="activeTab"
-                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-500"
+                    className="absolute -bottom-1 left-0 right-0 h-0.5 bg-gradient-to-r from-primary-500 to-primary-600 dark:from-accent-500 dark:to-accent-400"
                     initial={false}
                     transition={{ type: "spring", stiffness: 500, damping: 30 }}
                   />
@@ -96,13 +96,12 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors duration-200"
+              className="p-2 rounded-lg bg-gray-50 dark:bg-dark-800 text-secondary hover:text-accent transition-colors duration-200"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun size={20} /> : <Moon size={20} />}
             </motion.button>
 
-            {/* Let's Connect scrolls directly to contact form */}
             <ScrollLink
               to="contact-form"
               spy={true}
@@ -128,7 +127,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+              className="p-2 rounded-lg bg-gray-50 dark:bg-dark-800 text-secondary"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -138,7 +137,7 @@ const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+              className="p-2 rounded-lg bg-gray-50 dark:bg-dark-800 text-secondary"
               aria-label="Toggle menu"
             >
               {isOpen ? <X size={20} /> : <Menu size={20} />}
@@ -156,7 +155,7 @@ const Navbar = () => {
               transition={{ duration: 0.3 }}
               className="lg:hidden overflow-hidden"
             >
-              <div className="py-4 space-y-2 bg-white/90 dark:bg-gray-950/90 backdrop-blur-md rounded-2xl mt-4 border border-gray-200 dark:border-gray-800">
+              <div className="py-4 space-y-2 bg-white/90 dark:bg-black/90 backdrop-blur-md rounded-2xl mt-4 border-default">
                 {navItems.map((item, index) => (
                   <motion.div
                     key={item.id}
@@ -174,14 +173,13 @@ const Navbar = () => {
                         setMenu(item.id)
                         setIsOpen(false)
                       }}
-                      className="block px-4 py-3 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg mx-2 transition-colors duration-200 cursor-pointer"
+                      className="block px-4 py-3 text-base font-medium text-primary hover:text-accent hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg mx-2 transition-colors duration-200 cursor-pointer"
                     >
                       {item.name}
                     </ScrollLink>
                   </motion.div>
                 ))}
 
-                {/* Let's Connect (Mobile) */}
                 <div className="px-2 pt-2">
                   <ScrollLink
                     to="contact-form"

@@ -30,11 +30,11 @@ const Hero = () => {
   }
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-gradient-to-br from-beige-50 to-white dark:from-gray-950 dark:to-gray-900">
+    <section id="home" className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 bg-white dark:bg-black">
       {/* Background Elements */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-beige-200/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gray-200/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-primary-500/10 dark:bg-accent-500/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-primary-300/10 dark:bg-accent-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="container-custom section-padding">
@@ -53,17 +53,17 @@ const Hero = () => {
               <motion.img
                 src={profile_img}
                 alt="Gitesh Sagvekar"
-                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-beige-200 dark:border-gray-700 shadow-2xl"
+                className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 rounded-full object-cover border-4 border-white dark:border-gray-800 shadow-2xl"
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.3 }}
               />
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-beige-300/20 to-gray-300/20 animate-glow"></div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-500/20 to-primary-300/20 dark:from-accent-500/20 dark:to-accent-300/20 animate-glow"></div>
             </div>
           </motion.div>
 
           {/* Greeting */}
           <motion.div variants={itemVariants} className="mb-4">
-            <span className="inline-flex items-center px-4 py-2 rounded-full bg-beige-100 dark:bg-gray-800 text-beige-800 dark:text-beige-200 text-sm font-medium border border-beige-200 dark:border-gray-700">
+            <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-50 dark:bg-dark-800 text-gray-900 dark:text-dark-50 text-sm font-medium border border-gray-200 dark:border-gray-700">
               👋 Hello, I'm
             </span>
           </motion.div>
@@ -79,7 +79,7 @@ const Hero = () => {
           {/* Title */}
           <motion.h2
             variants={itemVariants}
-            className="text-xl sm:text-2xl lg:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-8"
+            className="text-xl sm:text-2xl lg:text-3xl font-semibold text-secondary mb-8"
           >
             Full Stack Software Engineer
           </motion.h2>
@@ -87,10 +87,10 @@ const Hero = () => {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-12 leading-relaxed text-balance"
+            className="text-lg sm:text-xl text-secondary max-w-4xl mx-auto mb-12 leading-relaxed text-balance"
           >
             I build scalable, high-impact digital solutions with{' '}
-            <span className="font-semibold text-beige-700 dark:text-beige-400">3+ years of experience</span>.
+            <span className="font-semibold text-accent">3+ years of experience</span>.
             Specialized in React, Node.js, AWS, and modern web technologies.
             I've improved app performance by 27% and reduced deployment time by 31%.
           </motion.p>
@@ -107,7 +107,7 @@ const Hero = () => {
             ].map((stat, index) => (
               <div key={index} className="text-center">
                 <div className="text-2xl sm:text-3xl font-bold gradient-text">{stat.number}</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 font-medium">{stat.label}</div>
+                <div className="text-sm text-secondary font-medium">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -144,7 +144,7 @@ const Hero = () => {
               <motion.div
                 animate={{ y: [0, 10, 0] }}
                 transition={{ duration: 2, repeat: Infinity }}
-                className="flex flex-col items-center text-gray-400 dark:text-gray-600 hover:text-beige-600 dark:hover:text-beige-400 transition-colors duration-300 cursor-pointer"
+                className="flex flex-col items-center text-secondary hover:text-accent transition-colors duration-300 cursor-pointer"
               >
                 <span className="text-sm font-medium mb-2">Scroll to explore</span>
                 <ArrowDown size={20} />
