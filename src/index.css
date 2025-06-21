@@ -32,6 +32,11 @@
   ::-webkit-scrollbar-thumb:hover {
     @apply bg-primary-600 dark:bg-accent-400;
   }
+
+  /* Ensure sticky elements don't interfere with content */
+  main {
+    @apply lg:px-20;
+  }
 }
 
 @layer components {

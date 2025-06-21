@@ -8,11 +8,13 @@ import Projects from './Components/Projects/Projects'
 import Social from './Components/Social/Social'
 import Contact from './Components/Contact/Contact'
 import Footer from './Components/Footer/Footer'
+import StickyElements from './Components/StickyElements/StickyElements'
 
 const App = () => {
   return (
     <div className="min-h-screen">
       <Navbar />
+      <StickyElements />
       <main>
         <Hero />
         <About />
