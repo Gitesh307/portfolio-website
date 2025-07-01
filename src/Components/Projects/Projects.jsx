@@ -35,7 +35,7 @@ const Projects = () => {
       description: "Built using Django, PostgreSQL, and JavaScript. Enables users to scan QR-coded trash bins, schedule pickups, and track recycling. Integrated a chatbot for FAQs and used ML for user behavior insights.",
       image: "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=800",
       liveUrl: "https://wecan-4520.onrender.com/",
-      githubUrl: "https://github.com/Gitesh307/wecan-project",
+      githubUrl: "https://github.com/Gitesh307/WeCan",
       technologies: ["Django", "PostgreSQL", "JavaScript", "HTML/CSS", "Machine Learning"],
       category: "Full Stack"
     },
@@ -45,7 +45,7 @@ const Projects = () => {
       description: "Redesigned the official Clark Data Science site using React. Showcased faculty, course info, and student projects with improved UI/UX and mobile responsiveness.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
       liveUrl: "http://www.cs.clarku.edu/~data-science/",
-      githubUrl: "https://github.com/Gitesh307/clark-ds-website",
+      githubUrl: "https://github.com/Gitesh307/data-science",
       technologies: ["ReactJS", "JavaScript", "CSS", "Responsive Design"],
       category: "Frontend"
     },
@@ -55,7 +55,7 @@ const Projects = () => {
       description: "A full-stack appointment scheduler built with React and Node.js. Users can book slots, manage appointments, and view services with real-time feedback.",
       image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=800",
       liveUrl: "https://barber-house.onrender.com/",
-      githubUrl: "https://github.com/Gitesh307/barbershop-booking",
+      githubUrl: "https://github.com/Gitesh307/barber-house",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Real-time"],
       category: "Full Stack"
     },
