@@ -13,14 +13,14 @@ const Social = () => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/giteshsagvekar',
+      url: 'https://www.linkedin.com/in/giteshvs/',
       icon: Linkedin,
       color: 'hover:text-blue-600',
       bgColor: 'hover:bg-blue-50 dark:hover:bg-blue-900/20'
     },
     {
       name: 'Instagram',
-      url: 'https://instagram.com/gitesh_sagvekar',
+      url: 'https://www.instagram.com/giteshvs/',
       icon: Instagram,
       color: 'hover:text-pink-600',
       bgColor: 'hover:bg-pink-50 dark:hover:bg-pink-900/20'
