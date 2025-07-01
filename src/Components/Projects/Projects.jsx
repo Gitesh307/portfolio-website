@@ -34,7 +34,7 @@ const Projects = () => {
       title: "WeCan — Smart Waste Management System",
       description: "Built using Django, PostgreSQL, and JavaScript. Enables users to scan QR-coded trash bins, schedule pickups, and track recycling. Integrated a chatbot for FAQs and used ML for user behavior insights.",
       image: "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=800",
-      liveUrl: "https://wecan-demo-url.com",
+      liveUrl: "https://wecan-4520.onrender.com/",
       githubUrl: "https://github.com/Gitesh307/wecan-project",
       technologies: ["Django", "PostgreSQL", "JavaScript", "HTML/CSS", "Machine Learning"],
       category: "Full Stack"
@@ -54,7 +54,7 @@ const Projects = () => {
       title: "BarberShop Appointment Website",
       description: "A full-stack appointment scheduler built with React and Node.js. Users can book slots, manage appointments, and view services with real-time feedback.",
       image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=800",
-      liveUrl: "https://barbershop-booking-demo.com",
+      liveUrl: "https://barber-house.onrender.com/",
       githubUrl: "https://github.com/Gitesh307/barbershop-booking",
       technologies: ["React", "Node.js", "Express", "MongoDB", "Real-time"],
       category: "Full Stack"
