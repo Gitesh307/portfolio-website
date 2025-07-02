@@ -34,8 +34,8 @@ const Projects = () => {
       title: "WeCan — Smart Waste Management System",
       description: "Built using Django, PostgreSQL, and JavaScript. Enables users to scan QR-coded trash bins, schedule pickups, and track recycling. Integrated a chatbot for FAQs and used ML for user behavior insights.",
       image: "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=800",
-      liveUrl: "https://wecan-4520.onrender.com/",
-      githubUrl: "https://github.com/Gitesh307/WeCan",
+      liveUrl: "https://swms-hh2h.onrender.com/",
+      githubUrl: "https://github.com/Gitesh307/SmartWasteManagementSystem",
       technologies: ["Django", "PostgreSQL", "JavaScript", "HTML/CSS", "Machine Learning"],
       category: "Full Stack"
     },
@@ -61,13 +61,13 @@ const Projects = () => {
     },
     {
       id: 3,
-      title: "ASL-Based Desktop Controller",
-      description: "Computer Vision-based project to control desktop actions using American Sign Language (ASL) gestures. Implemented using OpenCV and MediaPipe for gesture recognition.",
+      title: "Girls in Worcester Inc.",
+      description: "Redesigned the official Girls In Worcester Inc. site using React.",
       image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800",
-      liveUrl: "https://asl-desktop-control-demo.com",
-      githubUrl: "https://github.com/Gitesh307/asl-desktop-controller",
-      technologies: ["Python", "OpenCV", "MediaPipe", "Computer Vision"],
-      category: "AI/ML"
+      liveUrl: "https://www.girlsincworcester.org/",
+      githubUrl: "https://github.com/Gitesh307/girlsincworcester",
+      technologies: ["React"],
+      category: "Full Stack"
     }
   ]
 
