@@ -12,7 +12,7 @@ const StickyElements = () => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/giteshsagvekar',
+      url: 'https://linkedin.com/in/giteshvs',
       icon: Linkedin,
       color: 'hover:text-blue-600'
     },
