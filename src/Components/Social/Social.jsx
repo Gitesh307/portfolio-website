@@ -13,7 +13,7 @@ const Social = () => {
     },
     {
       name: 'LinkedIn',
-      url: 'https://www.linkedin.com/in/giteshvs/',
+      url: 'www.linkedin.com/in/giteshvs',
       icon: Linkedin,
       color: 'hover:text-blue-600',
       bgColor: 'hover:bg-blue-50 dark:hover:bg-blue-900/20'
