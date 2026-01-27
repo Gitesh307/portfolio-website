@@ -3,7 +3,7 @@ import { motion } from 'framer-motion'
 import { ArrowDown, Download, Mail } from 'lucide-react'
 import profile_img from '../../assets/Gitesh_Pic.png'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
-import resume from '../../assets/GiteshSagvekarResume.pdf'
+import resume from '../../assets/Gitesh Sagvekar.pdf'
 
 const Hero = () => {
   const containerVariants = {
