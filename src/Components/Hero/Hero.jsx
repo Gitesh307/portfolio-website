@@ -79,20 +79,20 @@ const Hero = () => {
           {/* Title */}
           <motion.h2
             variants={itemVariants}
-            className="text-xl sm:text-2xl lg:text-3xl font-semibold text-secondary mb-8"
+            className="text-xl sm:text-2xl lg:text-3xl font-semibold text-secondary mb-6"
           >
-            Full Stack Software Engineer
+            Backend-Focused Full Stack Engineer
           </motion.h2>
 
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="text-lg sm:text-xl text-secondary max-w-4xl mx-auto mb-12 leading-relaxed text-balance"
+            className="text-lg sm:text-xl text-secondary max-w-4xl mx-auto mb-10 leading-relaxed text-balance"
           >
-            I build scalable, high-impact digital solutions with{' '}
-            <span className="font-semibold text-accent">3+ years of experience</span>.
-            Specialized in React, Node.js, AWS, and modern web technologies.
-            I've improved app performance by 27% and reduced deployment time by 31%.
+            I build scalable backend systems and real-world products{' '}
+            <span className="font-semibold text-accent">4+ years of experience</span>.
+Currently working at Amgen, developing production-grade APIs and backend services for enterprise healthcare systems. I also built Edkonnect, a tutoring marketplace platform handling end-to-end workflows including onboarding, scheduling, payments, and communication.
+Focused on backend engineering, API design, and building secure, reliable systems using Java, Python, TypeScript, and AWS.
           </motion.p>
 
           {/* Stats */}

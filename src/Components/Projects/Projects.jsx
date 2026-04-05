@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ExternalLink, Github, Code, Database, Globe, Eye } from 'lucide-react'
+import edkonnectAcademyImage from '../../assets/edkonnect-academy-project.png'
 
 const Projects = () => {
   const [activeProject, setActiveProject] = useState(0)
@@ -31,6 +32,16 @@ const Projects = () => {
   const projects = [
     {
       id: 0,
+      title: "Edkonnect Academy",
+      description: "Built a full-stack tutoring marketplace enabling parents, tutors, coordinators, and admins to manage end-to-end learning workflows including onboarding, scheduling, payments, and communication. Designed scalable backend systems and integrated secure billing and real-time user workflows.",
+      image: edkonnectAcademyImage,
+      liveUrl: "https://edkonnect-academy.com/",
+      githubUrl: "https://github.com/edkonnect/marketplace-react",
+      technologies: ["React", "TypeScript", "Node.js", "Express", "tRPC", "Drizzle ORM", "MySQL", "AWS", "Stripe"],
+      category: "Full Stack"
+    },
+    {
+      id: 1,
       title: "WeCan — Smart Waste Management System",
       description: "Built using Django, PostgreSQL, and JavaScript. Enables users to scan QR-coded trash bins, schedule pickups, and track recycling. Integrated a chatbot for FAQs and used ML for user behavior insights.",
       image: "https://images.pexels.com/photos/3735218/pexels-photo-3735218.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -40,7 +51,7 @@ const Projects = () => {
       category: "Full Stack"
     },
     {
-      id: 1,
+      id: 2,
       title: "Clark DS Program Website",
       description: "Redesigned the official Clark Data Science site using React. Showcased faculty, course info, and student projects with improved UI/UX and mobile responsiveness.",
       image: "https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -50,7 +61,7 @@ const Projects = () => {
       category: "Frontend"
     },
     {
-      id: 2,
+      id: 3,
       title: "BarberShop Appointment Website",
       description: "A full-stack appointment scheduler built with React and Node.js. Users can book slots, manage appointments, and view services with real-time feedback.",
       image: "https://images.pexels.com/photos/1813272/pexels-photo-1813272.jpeg?auto=compress&cs=tinysrgb&w=800",
@@ -60,7 +71,7 @@ const Projects = () => {
       category: "Full Stack"
     },
     {
-      id: 3,
+      id: 4,
       title: "Girls in Worcester Inc.",
       description: "Redesigned the official Girls In Worcester Inc. site using React.",
       image: "https://images.pexels.com/photos/8566473/pexels-photo-8566473.jpeg?auto=compress&cs=tinysrgb&w=800",

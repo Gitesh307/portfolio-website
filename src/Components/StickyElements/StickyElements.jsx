@@ -128,7 +128,7 @@ const StickyElements = () => {
             className="group relative"
           >
             <a
-              href="mailto:giteshsagvekar07@gmail.com"
+              href="mailto:gitesh.sagvekar307@gmail.com"
               className="block p-4 rounded-xl bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl transition-all duration-300 hover:text-primary-600 dark:hover:text-accent-400"
               aria-label="Send me an email"
             >
@@ -138,7 +138,7 @@ const StickyElements = () => {
                   className="text-sm font-medium text-gray-700 dark:text-gray-300 group-hover:text-primary-600 dark:group-hover:text-accent-400 transition-colors duration-300"
                   style={{ writingMode: 'vertical-rl', textOrientation: 'mixed' }}
                 >
-                  giteshsagvekar07@gmail.com
+                  gitesh.sagvekar307@gmail.com
                 </div>
               </div>
             </a>

@@ -79,10 +79,10 @@ const Footer = () => {
                 <h3 className="text-lg font-semibold mb-6">Get In Touch</h3>
                 <div className="space-y-3">
                   <a
-                    href="mailto:giteshsagvekar07@gmail.com"
+                    href="mailto:gitesh.sagvekar307@gmail.com"
                     className="block text-gray-300 hover:text-beige-300 transition-colors duration-200"
                   >
-                    giteshsagvekar07@gmail.com
+                    gitesh.sagvekar307@gmail.com
                   </a>
                   <a
                     href="tel:+17745198635"

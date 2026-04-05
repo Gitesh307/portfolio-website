@@ -3,17 +3,6 @@ import { motion } from 'framer-motion'
 import { Building, Calendar, MapPin } from 'lucide-react'
 
 const Experience = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1
-      }
-    }
-  }
-
   const itemVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: {
@@ -28,6 +17,34 @@ const Experience = () => {
 
   const experiences = [
     {
+      company: "Edkonnect",
+      position: "Full Stack Developer (Part-time)",
+      duration: "Dec 2025 – Present",
+      location: "Remote",
+      type: "Part-time",
+      achievements: [
+        "Built a full-stack tutoring marketplace using React and a TypeScript backend (Express, tRPC, Drizzle, MySQL), supporting multi-role workflows",
+        "Designed secure backend architecture with JWT authentication, refresh-token rotation, email verification, and role-based access control",
+        "Implemented Stripe-powered billing flows for subscriptions, installments, and payments with webhook-based reconciliation",
+        "Developed scalable backend systems handling scheduling, messaging, and real-world user workflows"
+      ]
+    },
+    {
+      company: "Amgen",
+      position: "Full Stack Engineer",
+      duration: "Jan 2025 – Nov 2025",
+      location: "USA (Remote)",
+      type: "Contract",
+      achievements: [
+        "Built and optimized high-volume REST APIs in Java, improving response time and supporting production-scale traffic across enterprise healthcare systems",
+        "Developed scalable Spring Boot microservices following SOLID principles, enabling modular and maintainable backend architecture",
+        "Designed backend services for healthcare workflows, translating complex business and regulatory requirements into secure, production-ready systems",
+        "Developed Python-based automation and validation services, improving processing reliability and reducing manual effort",
+        "Implemented data transformation pipelines in Python, reducing inconsistencies across distributed systems by ~30%",
+        "Managed AWS infrastructure (EC2, S3, ELB, CloudFront) to support scalable deployments and high availability"
+      ]
+    },
+    {
       company: "Tata Consultancy Services (TCS)",
       position: "System Engineer",
       duration: "July 2021 – Dec 2023",
@@ -39,44 +56,21 @@ const Experience = () => {
         "Enhanced frontend performance and reduced response time by 27% through code optimization",
         "Recognized with awards for team excellence and project coordination"
       ]
-    },
-    {
-      company: "Clark University",
-      position: "Program Assistant & TA",
-      duration: "Oct 2024 – Present",
-      location: "Worcester, MA",
-      type: "Part-time",
-      achievements: [
-        "Revamped the Data Science Program website with ReactJS, increasing visibility by 30%",
-        "Created detailed faculty, course, project, and alumni pages in collaboration with the program director",
-        "Helped 30+ students in coursework and setup during Teaching Assistant role"
-      ]
-    },
-    {
-      company: "WeCan Initiative",
-      position: "Web & App Developer",
-      duration: "Nov 2024 – Present",
-      location: "Worcester, MA",
-      type: "Contract",
-      achievements: [
-        "Built a Django-based website for QR-enabled recycling bin tracking with PostgreSQL integration",
-        "Led the design of a mobile app interface and collaborated with founders using agile methodology",
-        "Focused on sustainability and user accessibility in platform features"
-      ]
     }
   ]
 
   return (
     <section id="experience" className="py-20 lg:py-32 bg-alt">
       <div className="container-custom section-padding">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-        >
+        <div>
           {/* Section Header */}
-          <motion.div variants={itemVariants} className="text-center mb-16">
+          <motion.div
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-100px" }}
+            className="text-center mb-16"
+          >
             <h2 className="section-title">Experience</h2>
             <p className="section-subtitle mt-4">
               My professional journey building scalable solutions and leading impactful projects
@@ -91,8 +85,11 @@ const Experience = () => {
             <div className="space-y-12">
               {experiences.map((exp, index) => (
                 <motion.div
-                  key={index}
+                  key={`${exp.company}-${exp.position}-${exp.duration}`}
                   variants={itemVariants}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, margin: "-80px" }}
                   className={`relative flex items-center ${
                     index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
                   }`}
@@ -160,7 +157,7 @@ const Experience = () => {
               ))}
             </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   )
